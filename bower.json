@@ -1,0 +1,17 @@
+{
+  "name": "dialog",
+  "main": "dialog.js",
+  "private": true,
+  "version": "0.1.0",
+  "homepage": "https://github.com/onebook/dialog",
+  "authors": [
+    "haoxin <coderhaoxin@outlook.com>"
+  ],
+  "keywords": [
+    "dialog"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sass dialog.scss dialog.css
+node_modules/.bin/jade example/index.jade --pretty
