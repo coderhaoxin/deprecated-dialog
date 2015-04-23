@@ -1,4 +1,4 @@
-$duration: 400ms;
+$duration: 500ms;
 
 .dialog {
   position: fixed;
@@ -10,13 +10,6 @@ $duration: 400ms;
   background-color: rgba(74, 74, 74, 0.5);
   transition: opacity $duration;
   text-align: center;
-
-  .open {
-    display: block;
-  }
-  .close {
-    display: none;
-  }
 
   .content {
     box-sizing: border-box;
@@ -61,6 +54,7 @@ $duration: 400ms;
     // scale
     &.scale {
       transition: transform $duration;
+      transform: scale(0);
       &.show {
         transform: scale(1);
       }
