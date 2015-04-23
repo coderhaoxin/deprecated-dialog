@@ -13,33 +13,39 @@
 
   function Dialog(node, content) {
     this.node = node;
+    this.duration = 400;
     this.content = content;
   }
 
   Dialog.prototype.show = function() {
     this.node.style.display = 'block';
-    this.node.classList.remove('hide');
-    this.node.classList.add('show');
+    this.removeClass('hide');
+    this.addClass('show');
 
-    this.content.classList.remove('close');
-    this.content.classList.add('open');
+    this.removeClass('close');
+    this.addClass('open');
 
-    this.content.classList.remove('hide');
-    this.content.classList.add('show');
   };
 
   Dialog.prototype.hide = function() {
-    this.node.classList.remove('show');
-    this.node.classList.add('hide');
-
-    this.content.classList.remove('show');
-    this.content.classList.add('hide');
+    this.removeClass('show');
+    this.addClass('hide');
 
     var self = this;
     setTimeout(function() {
-      self.content.classList.remove('open');
-      self.content.classList.add('close');
+      self.removeClass('open');
+      self.addClass('close');
       self.node.style.display = 'none';
-    }, 300);
+    }, this.duration);
+  };
+
+  Dialog.prototype.addClass = function(name) {
+    this.node.classList.add(name);
+    this.content.classList.add(name);
+  };
+
+  Dialog.prototype.removeClass = function(name) {
+    this.node.classList.remove(name);
+    this.content.classList.remove(name);
   };
 }(window));
